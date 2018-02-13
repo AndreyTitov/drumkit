@@ -17,6 +17,7 @@ body {
     background: rgba(0, 0, 0, 0.7);
     color: #2ba366;
     transition: all .1s ease-in-out;
+    cursor: pointer;
 }
 
 .key-letter {
@@ -55,4 +56,12 @@ body {
 
 .kick, .hat, .openhat, .snare {
     margin: 20px auto;
+}
+
+
+/* player */
+
+.player__main {
+    width: 500px;
+    margin: 0 400px;
 }
