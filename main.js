@@ -118,12 +118,4 @@ snareKey[2].onclick = function(click) {
     audioSnare.play();
 }; 
 
-// Onclick end
-
-
-
-
-
-
-
 // console.log(clickKeys);
