@@ -1,0 +1,87 @@
+$tablet: 'max-width: 768px';
+$mobile: 'max-width: 390px';
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('img/wind.jpg');
+    background-size: cover;
+
+    @media ($mobile) {
+        width: 390px;
+    }
+}
+
+.key {
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    color: #2ba366;
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+
+    @media ($mobile) {
+        width: 25px;
+        height: 25px;
+
+    }
+
+    &-letter {
+        font-size: 2rem;
+        margin: 20px;
+        padding: 0;
+    } 
+}
+
+// .key-letter {
+//     font-size: 2rem;
+//     margin: 20px;
+//     padding: 0;
+// } 
+
+.sound {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+/* Playing */
+.playing {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 0px #8cffc5;
+    color: #8cffc5;
+    background: rgba(75, 75, 75, .7);
+}
+/* ../ */
+.keys {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;   
+}
+
+.kick, .hat, .openhat, .snare {
+    margin: 20px auto;
+}
+
+
+/* player */
+
+.player__main {
+    width: 500px;
+    margin: 0 400px;
+}
