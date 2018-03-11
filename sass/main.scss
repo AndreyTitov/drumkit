@@ -1,17 +1,16 @@
 $tablet: 'max-width: 768px';
 $mobile: 'max-width: 390px';
 
-
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: url('img/wind.jpg');
+    background: url('../img/wind.jpg');
     background-size: cover;
 
     @media ($mobile) {
-        width: 390px;
+        background: url('../img/wall.jpg');
     }
 }
 
@@ -28,17 +27,22 @@ body {
     cursor: pointer;
 
     @media ($mobile) {
-        width: 25px;
-        height: 25px;
-
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.9);
     }
 
     &-letter {
         font-size: 2rem;
         margin: 20px;
         padding: 0;
+        
+        @media ($mobile) {
+            display: none;
+        }
     } 
 }
+
 
 // .key-letter {
 //     font-size: 2rem;
@@ -49,6 +53,10 @@ body {
 .sound {
     font-size: 0.8rem;
     color: #fff;
+    
+    @media ($mobile) {
+        display: none;
+    }
 }
 
 /* Playing */
@@ -64,6 +72,46 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @media ($mobile) {
+        width: 390px;
+        display: block;
+    }
+
+    &__kick {
+        @media ($mobile) {
+            justify-content: space-between;
+            display: flex;
+        }
+        
+        &-title {
+            @media ($mobile) {
+                display: block;
+            }
+        }
+    }
+
+
+    &__hats {
+        @media ($mobile) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__openhats {
+        @media ($mobile) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__snares {
+        @media ($mobile) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 .title {
@@ -71,7 +119,11 @@ body {
     font-size: 2rem;
     text-transform: uppercase;
     text-align: center;
-    color: #fff;   
+    color: #fff;  
+    
+    @media ($mobile) {
+        font-size: 1.5rem;
+    }
 }
 
 .kick, .hat, .openhat, .snare {
