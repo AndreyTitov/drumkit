@@ -25,9 +25,9 @@ var kickKey = document.getElementsByClassName('kick');
 kickKey[0].addEventListener("touchstart", function(touch) {
     kickKey[0].classList.add('playing');
     var audioKick = document.querySelector(`audio.kick1`);
-    audioKick.currentTime = 0;
     audioKick.play();
 });
+
 
 kickKey[1].addEventListener("touchstart", function(touch) {
     kickKey[1].classList.add('playing');
