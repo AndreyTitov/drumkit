@@ -29,9 +29,15 @@ kickKey[0].addEventListener("touchstart", function(touch) {
     audioKick1.play();
 });
 
+kickKey[0].addEventListener("touchend", function(touch) {
+    kickKey[0].classList.add('playing');
+    audioKick1.currentTime = 0;
+    audioKick1.play();
+});
+
 const audioKick2 = document.querySelector(`audio.kick2`);
 
-kickKey[1].addEventListener("touchstart", function(touch) {
+kickKey[1].addEventListener("touchend", function(touch) {
     kickKey[1].classList.add('playing');
     audioKick2.currentTime = 0;
     audioKick2.play();
