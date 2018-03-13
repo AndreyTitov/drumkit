@@ -23,57 +23,49 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 const kickKey = document.getElementsByClassName('kick');
 const audioKick1 = document.querySelector(`audio.kick1`);
 
-kickKey[0].addEventListener("touchstart", function(touch) {
+kickKey[0].addEventListener("touchend", function(touch) {
     kickKey[0].classList.add('playing');
     audioKick1.currentTime = 0;
     audioKick1.load();
     audioKick1.play();
 });
 
-kickKey[0].addEventListener("touchend", function(offtouch) {
-    kickKey[0].classList.remove('playing');
-});
-
 
 const audioKick2 = document.querySelector(`audio.kick2`);
 
-kickKey[1].addEventListener("touchstart", function(touch) {
+kickKey[1].addEventListener("touchend", function(touch) {
     kickKey[1].classList.add('playing');
     audioKick2.currentTime = 0;
-    audioKick2.load();
     audioKick2.play();
 }); 
 
 const audioKick3 = document.querySelector(`audio.kick3`);
 
-kickKey[2].addEventListener("touchstart", function(touch) {
+kickKey[2].addEventListener("touchend", function(touch) {
     kickKey[2].classList.add('playing');
     audioKick3.currentTime = 0;
     audioKick3.play();
-}); 
+});
 
-kickKey[2].addEventListener("touchstart", function(offtouch) {
-    kickKey[2].classList.remove('playing');
-}); 
 // Touch Hat Keys
 
 var hatKey = document.getElementsByClassName('hat');
 
-hatKey[0].addEventListener("touchstart", function(touch) {
+hatKey[0].addEventListener("touchend", function(touch) {
     hatKey[0].classList.add('playing');
     var audioHat = document.querySelector(`audio.hat1`);
     audioHat.currentTime = 0;
     audioHat.play();
 });
 
-hatKey[1].addEventListener("touchstart", function(touch) {
+hatKey[1].addEventListener("touchend", function(touch) {
     hatKey[1].classList.add('playing');
     var audioHat = document.querySelector(`audio.hat2`);
     audioHat.currentTime = 0;
     audioHat.play();
 }); 
 
-hatKey[2].addEventListener("touchstart", function(touch) {
+hatKey[2].addEventListener("touchend", function(touch) {
     hatKey[2].classList.add('playing');
     var audioHat = document.querySelector(`audio.hat3`);
     audioHat.currentTime = 0;
@@ -84,21 +76,21 @@ hatKey[2].addEventListener("touchstart", function(touch) {
 
 var openhatKey = document.getElementsByClassName('openhat');
 
-openhatKey[0].addEventListener("touchstart", function(touch) {
+openhatKey[0].addEventListener("touchend", function(touch) {
     openhatKey[0].classList.add('playing');
     var audioOpenhat = document.querySelector(`audio.openhat1`);
     audioOpenhat.currentTime = 0;
     audioOpenhat.play();
 });
 
-openhatKey[1].addEventListener("touchstart", function(touch) {
+openhatKey[1].addEventListener("touchend", function(touch) {
     openhatKey[1].classList.add('playing');
     var audioOpenhat = document.querySelector(`audio.openhat2`);
     audioOpenhat.currentTime = 0;
     audioOpenhat.play();
 }); 
 
-openhatKey[2].addEventListener("touchstart", function(touch) {
+openhatKey[2].addEventListener("touchend", function(touch) {
     openhatKey[2].classList.add('playing');
     var audioOpenhat = document.querySelector(`audio.openhat3`);
     audioOpenhat.currentTime = 0;
@@ -109,21 +101,21 @@ openhatKey[2].addEventListener("touchstart", function(touch) {
 
 var snareKey = document.getElementsByClassName('snare');
 
-snareKey[0].addEventListener("touchstart", function(touch) {
+snareKey[0].addEventListener("touchend", function(touch) {
     snareKey[0].classList.add('playing');
     var audioSnare = document.querySelector(`audio.snare1`);
     audioSnare.currentTime = 0;
     audioSnare.play();
 });
 
-snareKey[1].addEventListener("touchstart", function(touch) {
+snareKey[1].addEventListener("touchend", function(touch) {
     snareKey[1].classList.add('playing');
     var audioSnare = document.querySelector(`audio.snare2`);
     audioSnare.currentTime = 0;
     audioSnare.play();
 }); 
 
-snareKey[2].addEventListener("touchstart", function(touch) {
+snareKey[2].addEventListener("touchend", function(touch) {
     snareKey[2].classList.add('playing');
     var audioSnare = document.querySelector(`audio.snare3`);
     audioSnare.currentTime = 0;
