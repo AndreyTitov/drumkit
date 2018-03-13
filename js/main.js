@@ -26,20 +26,21 @@ const audioKick1 = document.querySelector(`audio.kick1`);
 kickKey[0].addEventListener("touchstart", function(touch) {
     kickKey[0].classList.add('playing');
     audioKick1.currentTime = 0;
+    audioKick1.load();
     audioKick1.play();
 });
 
-kickKey[0].addEventListener("touchend", function(touch) {
-    kickKey[0].classList.add('playing');
-    audioKick1.currentTime = 0;
-    audioKick1.play();
+kickKey[0].addEventListener("touchend", function(offtouch) {
+    kickKey[0].classList.remove('playing');
 });
+
 
 const audioKick2 = document.querySelector(`audio.kick2`);
 
-kickKey[1].addEventListener("touchend", function(touch) {
+kickKey[1].addEventListener("touchstart", function(touch) {
     kickKey[1].classList.add('playing');
     audioKick2.currentTime = 0;
+    audioKick2.load();
     audioKick2.play();
 }); 
 
@@ -51,6 +52,9 @@ kickKey[2].addEventListener("touchstart", function(touch) {
     audioKick3.play();
 }); 
 
+kickKey[2].addEventListener("touchstart", function(offtouch) {
+    kickKey[2].classList.remove('playing');
+}); 
 // Touch Hat Keys
 
 var hatKey = document.getElementsByClassName('hat');
